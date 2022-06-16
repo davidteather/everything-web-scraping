@@ -39,8 +39,6 @@ const Discover = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [currentPage, isMoreData]);
 
-    const backgroundColors = ['#8ECAE6', '#219EBC', '#D82F2F', '#FB8500', '#FFB703']
-
     return (
         <>
             <Header></Header>
@@ -50,7 +48,7 @@ const Discover = () => {
                     profiles.map((profile, i) => {
                         return (
                             <div key={profile.username} className="row row-cols-3" style={{'marginBottom': '2rem', justifyContent: 'center'}}>
-                                <div className="col rounded-circle text-center " style={{'backgroundColor': backgroundColors[i % backgroundColors.length], width: '5rem', padding: 0, fontSize: '4rem'}}>{profile.name[0]}</div>
+                                <div className="col rounded-circle text-center my-auto" style={{'backgroundColor': profile.profile_color, width: '5rem', padding: 0, fontSize: '4rem'}}>{profile.name[0]}</div>
                                 <div className="col my-auto">
                                     <b style={{'fontSize': '1.8rem'}}>{profile.name}</b>
                                     <div>Is working as a <b>{profile.job}</b> at <b>{profile.company}</b></div>

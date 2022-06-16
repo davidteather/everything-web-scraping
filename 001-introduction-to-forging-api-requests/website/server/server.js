@@ -32,6 +32,39 @@ app.get('/discover/profiles/:page', async (req, res) => {
     })
 })
 
+app.get('/feed/:page', async (req, res) => {
+    let page = req.params.page
+    const client = await getClient.getClient()
+
+    await client.query(`SELECT * FROM posts ORDER BY likes_count DESC LIMIT ${PAGE_SIZE} OFFSET ${PAGE_SIZE * page}`, (err, result) => {
+        if (err) {
+            console.log(err)
+            res.sendStatus(500)
+            client.end()
+        } else {
+            res.json({ posts: result.rows })
+            client.end()
+        }
+    })
+})
+
+app.get('/profile/:username/feed/:page', async (req, res) => {
+    let page = req.params.page
+    let username = req.params.username
+    const client = await getClient.getClient()
+
+    await client.query(`SELECT * FROM posts WHERE author_username='${username}' ORDER BY likes_count DESC LIMIT ${PAGE_SIZE} OFFSET ${PAGE_SIZE * page}`, (err, result) => {
+        if (err) {
+            console.log(err)
+            res.sendStatus(500)
+            client.end()
+        } else {
+            res.json({ posts: result.rows })
+            client.end()
+        }
+    })
+})
+
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`);
     seedDatabase();

@@ -4,6 +4,7 @@ import Feed from "./pages/Feed";
 import Discover from './pages/Discover';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
+import ProfileFeed from "./pages/ProfileFeed";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
             <Route index element={<Feed />} />
             <Route path="/discover" element={<Discover />} />
+            <Route path="/profile/:username" element={<ProfileFeed />} />
         </Routes>
       </BrowserRouter>
     </main>

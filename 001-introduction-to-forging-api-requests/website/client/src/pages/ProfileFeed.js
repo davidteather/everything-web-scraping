@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 import Header from "../components/Header"
 import Post from "../components/Post";
-import { getFeed } from "../services/FeedService";
+import { getProfileFeed } from "../services/FeedService";
+import { useParams } from 'react-router-dom'
 
-const Feed = () => {
+const ProfileFeed = () => {
     const [posts, setPosts] = useState([])
     const [currentPage, setCurrentPage] = useState(0)
     const [requestInProgress, setRequestInProgress] = useState(false)
     const [isMoreData, setIsMoreData] = useState(true)
+    const { username } = useParams()
 
     useEffect(() => {
         setRequestInProgress(true)
         
         if (isMoreData) {
-            getFeed(currentPage).then((data) => {
+            getProfileFeed(username, currentPage).then((data) => {
                 setPosts(p => p.concat(data.posts))
                 if (data.posts.length === 0) {
                     setIsMoreData(false)
@@ -52,4 +54,4 @@ const Feed = () => {
     
 }
 
-export default Feed
+export default ProfileFeed
