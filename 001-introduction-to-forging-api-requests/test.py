@@ -1,12 +1,26 @@
+# Grades submission.py on the test cases
+# Don't look inside this if you haven't passed the tests yet
+
 from activity import extract_feed
 import json
 
 def test_extract_feed(posts):
-    feed = extract_feed()
+    images = []
     for post in posts:
-        if post not in feed:
-            print(f"extract_feed(): ❌")
+        images.append(post["image_url"]) # Image urls are unique
+
+    feed = extract_feed()
+    for post in feed:
+        if post["image_url"] not in images:
+            print(post)
+            print(f"extract_feed(): ❌\n\tReturned a post that was not in the database (or returned multiple instances of a single post)")
             return False
+        
+        images.remove(post["image_url"])
+
+    if len(images) != 0:
+        print(f"extract_feed(): ❌\n\tDidn't return all posts in the database")
+        return False
 
     return True
 
@@ -17,7 +31,7 @@ if __name__ == "__main__":
     profiles = data["profiles"]
     posts = data["posts"]
 
-    passed_extract_feed = extract_feed()
+    passed_extract_feed = test_extract_feed(posts)
 
     if passed_extract_feed:
         print(f"All tests: ✅")

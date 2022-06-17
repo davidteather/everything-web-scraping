@@ -18,7 +18,5 @@ def extract_feed():
 
     return []
 
-
 if __name__ == "__main__":
-    # You can write some of your own tests or whatever you want here!
     pass
