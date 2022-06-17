@@ -16,12 +16,10 @@ services:
     container_name: lesson-001-client
     environment:
       REACT_APP_WEBSITE_NAME: Fakr
-      REACT_APP_BACKEND_HOST: db
+      REACT_APP_BACKEND_HOST: localhost # Since requests come from browser not docker, since SSR not currently used
       REACT_APP_BACKEND_PORT: 8080
     ports:
       - 3000:3000
-    depends_on:
-      - server
 
   server:
     build:
