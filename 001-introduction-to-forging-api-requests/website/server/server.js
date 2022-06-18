@@ -20,7 +20,11 @@ app.get('/discover/profiles/:page', async (req, res) => {
     let page = req.params.page
     const client = await getClient.getClient()
 
-    await client.query(`SELECT * FROM profiles LIMIT ${PAGE_SIZE} OFFSET ${PAGE_SIZE * page}`, (err, result) => {
+    await client.query(
+        {
+            text: `SELECT * FROM profiles LIMIT $1 OFFSET $2`,
+            values: [PAGE_SIZE, PAGE_SIZE * page]
+        }, (err, result) => {
         if (err) {
             console.log(err)
             res.sendStatus(500)
@@ -36,7 +40,11 @@ app.get('/feed/:page', async (req, res) => {
     let page = req.params.page
     const client = await getClient.getClient()
 
-    await client.query(`SELECT * FROM posts ORDER BY likes_count DESC LIMIT ${PAGE_SIZE} OFFSET ${PAGE_SIZE * page}`, (err, result) => {
+    await client.query(
+        {
+            text: "SELECT * FROM posts ORDER BY likes_count DESC LIMIT $1 OFFSET $2",
+            values: [PAGE_SIZE, PAGE_SIZE * page]
+        }, (err, result) => {
         if (err) {
             console.log(err)
             res.sendStatus(500)
@@ -53,16 +61,38 @@ app.get('/profile/:username/feed/:page', async (req, res) => {
     let username = req.params.username
     const client = await getClient.getClient()
 
-    await client.query(`SELECT * FROM posts WHERE author_username='${username}' ORDER BY likes_count DESC LIMIT ${PAGE_SIZE} OFFSET ${PAGE_SIZE * page}`, (err, result) => {
+    await client.query({
+        text: "SELECT * FROM profiles WHERE username=$1",
+        values: [username]
+    }, async (err, result) => {
         if (err) {
             console.log(err)
             res.sendStatus(500)
             client.end()
         } else {
-            res.json({ posts: result.rows })
-            client.end()
+            if (result.rowCount == 0) {
+                // User doesn't exist
+                res.json({ posts: [], error: "USER_DOES_NOT_EXIST"})
+                client.end()
+            } else {
+                await client.query(
+                    {
+                        text: "SELECT * FROM posts WHERE author_username=$1 ORDER BY likes_count DESC LIMIT $2 OFFSET $3",
+                        values: [username, PAGE_SIZE, PAGE_SIZE * page]
+                    }, (err, result) => {
+                    if (err) {
+                        console.log(err)
+                        res.sendStatus(500)
+                        client.end()
+                    } else {
+                        res.json({ posts: result.rows })
+                        client.end()
+                    }
+                })
+            }
         }
     })
+    
 })
 
 app.listen(process.env.PORT, () => {

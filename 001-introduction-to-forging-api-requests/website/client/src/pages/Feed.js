@@ -41,7 +41,7 @@ const Feed = () => {
                 {
                     posts.map((post, i) => {
                         return (
-                            <Post post={post}></Post>
+                            <Post key={post.id} post={post}></Post>
                             
                         )
                     })

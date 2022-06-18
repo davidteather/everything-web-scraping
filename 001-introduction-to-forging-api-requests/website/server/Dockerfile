@@ -1,5 +1,7 @@
 FROM node:16
 
+LABEL "lesson.number"=1
+
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install --silent
