@@ -26,8 +26,8 @@ def test_extract_feed(posts):
 
 def test_extract_emails(profiles):
     emails = []
-    for profile in profile:
-        emails.append(profile["mail"]) # Image urls are unique
+    for profile in profiles:
+        emails.append(profile["email"]) # Image urls are unique
 
     feed = extract_emails()
     for email in feed:
@@ -37,7 +37,7 @@ def test_extract_emails(profiles):
         
         emails.remove(email)
 
-    if len(email) != 0:
+    if len(emails) != 0:
         print(f"extract_emails(): ❌\n\tDidn't return all emails in the database")
         return False
 
