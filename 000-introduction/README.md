@@ -14,7 +14,7 @@ Welcome to the course! Glad you're here :)
     2. [Tools Required](#tools-required)
 
 ## Video For The Lesson
-[VIDEOLINK & THUMBNAIL](TODO:)
+Consider checking out the video for this introduction [here](https://www.youtube.com/watch?v=KY3E-6wVOqA&list=PLmRtxHvzkEE8Ofiy4hnnXSoxw7gs4HOHt), this video just provides the [slides](./slides.pdf) with commentary, later lessons are more high quality.
 
 ### Video Corrections
 None so far
@@ -23,12 +23,11 @@ None so far
 
 I'm David Teather and I work as a software engineer and my specialty is data extraction.
 
-If you'd like a more visual experience check out the introduction video on [YouTube](TODO:), or pull up the introduction powerpoint file TODO:.
-
+If you'd like a more visual experience check out the introduction video on [YouTube](https://www.youtube.com/watch?v=KY3E-6wVOqA&list=PLmRtxHvzkEE8Ofiy4hnnXSoxw7gs4HOHt), or pull up the introduction [slides](./slides.pdf)
 ### What I'm Known For
-* [My research](https://theresponsetimes.com/yikyak-is-exposing-user-locations/){:target="_blank"} on YikYak (a social media app) that was featured in [Vice](https://www.vice.com/en/article/7kbnna/anonymous-social-media-app-yik-yak-exposed-users-precise-locations){:target="_blank"} and [The Verge](https://www.theverge.com/2022/5/13/23070696/yik-yak-anonymous-app-precise-locations-revealed){:target="_blank"}
+* [My research](https://theresponsetimes.com/yikyak-is-exposing-user-locations/) on YikYak (a social media app) that was featured in [Vice](https://www.vice.com/en/article/7kbnna/anonymous-social-media-app-yik-yak-exposed-users-precise-locations) and [The Verge](https://www.theverge.com/2022/5/13/23070696/yik-yak-anonymous-app-precise-locations-revealed)
 * Creating various data extraction tools
-    * My most popular is [TikTokApi](https://github.com/davidteather/TikTok-Api){:target="_blank"}
+    * My most popular is [TikTokApi](https://github.com/davidteather/TikTok-Api)
         * 600K+ Downloads
         * 2.3K+ Stars
 
@@ -48,7 +47,7 @@ If you'd like a more visual experience check out the introduction video on [YouT
 
 ### How To Learn Effectively
 * Everybody learns different so these are guidelines
-* Take notes from the slides presented in the [videos](TODO){:target="_blank"} 
+* Take notes from the slides presented in the [videos](https://youtube.com/playlist?list=PLmRtxHvzkEE8Ofiy4hnnXSoxw7gs4HOHt) 
     * These will revolve around general concepts
     * Will be accompanied by programs to write
 * Try the activities before watching the solution in the video
@@ -61,7 +60,7 @@ If you'd like a more visual experience check out the introduction video on [YouT
 * Storing data at scale
 * Emulating human behavior
 * And more 
-    * Feel free to [tweet at me](https://twitter.com/david_teather){:target="_blank"} or file an issue with the `lesson-request` label with what you'd like to see
+    * Feel free to [tweet at me](https://twitter.com/david_teather) or file an issue with the `lesson-request` label with what you'd like to see
 
 ## Getting Started
 
@@ -73,12 +72,12 @@ Learn how to get started learning with this course!
         * We probably won't do much complex python
 
 ### Tools Required
-* [Docker](https://www.docker.com/){:target="_blank"}
+* [Docker](https://www.docker.com/)
     * And docker-compose (should be bundled)
-* [Python](https://www.python.org/){:target="_blank"}
+* [Python](https://www.python.org/)
     * I'll be using 3.10
 * A web browser
-    * I'll be using [Brave](https://brave.com/){:target="_blank"} (chromium based)
+    * I'll be using [Brave](https://brave.com/) (chromium based)
     * Doesn't really matter which as long as you can view network traffic
 * And the files in this git repo, so be sure to download it! (and maybe give it a star 😉)
 
