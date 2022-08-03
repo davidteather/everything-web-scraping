@@ -41,11 +41,16 @@ None so far
 Note: All of this information is covered with visuals in the video linked in this readme. If you watched the video you're done with the section.
 
 Without using a proxy, requests from your computer go directly to the server hosting the website you’re scraping. The server then has access to your IP making that request, which isn’t always a problem but there’s some techniques to stop web scraping that do use IP detection.
-![](./assets/without-proxy.png)
+
+<div align="center">
+  <img src="./assets/without-proxy.png">
+</div>
 
 Proxies are like pass-through computers for accessing the internet, your computer makes a request to a proxy, then that proxy makes the real request to the website returning its information to your computer.
 
-![](./assets/with-proxy.png)
+<div align="center">
+  <img src="./assets/with-proxy.png">
+</div>
 
 This way the website only has access to the IP from the proxy (which is easier to switch), not your real IP.
 
@@ -59,10 +64,16 @@ If an IP has made more than the permitted amount, then no data is returned thus 
 
 We can use proxies to circumnavigate this rate limit since the rate limiters are typically tied to a specific IP, we can use proxies to make requests from different IPs. Using a single proxy does not increase your effective rate limit, however if you use a combination of a bunch of different proxies, then the effective rate limit is multiplied by the number of proxies you’re using.
 
-![](./assets/5-req.png)
+<div align="center">
+  <img src="./assets/5-req.png">
+</div>
+
 To this server it looks like there's 5 different clients making requests.
 
-![](./assets/5-req-2.png)
+<div align="center">
+  <img src="./assets/5-req-2.png">
+</div>
+
 In reality it's just one computer controlling 5 different proxies.
 
 ## How To Get Proxies
@@ -101,7 +112,9 @@ Typically companies that offer proxies as a service have various types of differ
     * Disadvantages
         * Extremely expensive ($40/gb Bright Data July 2022)
 
-![](./assets/type-comp.png)
+<div align="center">
+  <img src="./assets/type-comp.png">
+</div>
 
 In addition to these different proxy types companies also typically offer two types of proxy pools.
 * Static IPs
@@ -119,7 +132,9 @@ In addition to these different proxy types companies also typically offer two ty
     * Disadvantages
         * If you need to log in as a user you'll be making requests from hundreds of IPs which is a huge red flag that you're a bot
 
-![](./assets/pool-comp.png)
+<div align="center">
+  <img src="./assets/pool-comp.png">
+</div>
 
 ## What Type Of Proxy Should You Use?
 
@@ -131,10 +146,16 @@ There's a lot of changing variables that go into this, a few: websites updating 
 I'll be using [webshare.io](https://www.webshare.io/?referral_code=3x5812idzzzp) (affiliate link) here but other proxy providers have really similar interfaces.
 
 On the side bar if you go to proxy -> list
-![](./assets/webshare-tab.png)
+
+<div align="center">
+  <img src="./assets/webshare-tab.png">
+</div>
 
 Then you should see something that looks like the following
-![](./assets/proxy-list.png)
+
+<div align="center">
+  <img src="./assets/proxy-list.png">
+</div>
 
 If we move these credentials into a python script we get something like
 ```py
@@ -197,9 +218,14 @@ requests.get("https://github.com/davidteather/everything-web-scraping/stargazers
 
 It's better to abstract this random proxy usage to either just read in a file that contains all of your proxies, or you could use what's called a **rotating proxy**. [webshare.io](https://www.webshare.io/?referral_code=3x5812idzzzp) (affiliate link) offers a free one that distributes your requests across all of your proxies.
 
-![](./assets/webshare-rotating.png)
+<div align="center">
+  <img src="./assets/webshare-rotating.png">
+</div>
 
-![](./assets/rotating.png)
+<div align="center">
+  <img src="./assets/rotating.png">
+</div>
+
 <small>Note: fake credentials</small>
 
 If we plug these credentials into the proxy dictionary it'll distribute our requests across all of the proxies that we have on the site.
