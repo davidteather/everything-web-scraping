@@ -2,6 +2,13 @@
 
 Welcome to the course! Glad you're here :)
 
+### Supporting The Project
+* Star the repo 😎
+    * Maybe share it with some people new to web-scraping?
+* Consider [sponsoring](https://github.com/sponsors/davidteather) me on GitHub
+* Send me an email or a [LinkedIn](https://www.linkedin.com/in/davidteather/) message telling me what you enjoy in the course (and maybe what else you want to see in the future)
+* Submit PRs for suggestions/issues :)
+
 ## Table Of Contents
 1. [Welcome!](#welcome)
     1. [What I'm Known For](#what-im-known-for)

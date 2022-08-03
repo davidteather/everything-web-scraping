@@ -2,6 +2,13 @@
 
 This lesson is designed to teach you how data is sent between websites and servers and how we can exploit this to extract data.
 
+### Supporting The Project
+* Star the repo 😎
+    * Maybe share it with some people new to web-scraping?
+* Consider [sponsoring](https://github.com/sponsors/davidteather) me on GitHub
+* Send me an email or a [LinkedIn](https://www.linkedin.com/in/davidteather/) message telling me what you enjoy in the course (and maybe what else you want to see in the future)
+* Submit PRs for suggestions/issues :)
+
 ## Learning Objectives
 * Learners will understand how data is sent between a client and a server.
 * Learners will forge API requests to a mock website.

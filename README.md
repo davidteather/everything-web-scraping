@@ -13,6 +13,12 @@ Glad you're here! If it's your first time check out the the [introduction](./000
 
 Consider [sponsoring me](https://github.com/sponsors/davidteather) on GitHub to make work like this possible
 
+### Supporting The Project
+* Star the repo 😎
+    * Maybe share it with some people new to web-scraping?
+* Consider [sponsoring](https://github.com/sponsors/davidteather) me on GitHub
+* Send me an email or a [LinkedIn](https://www.linkedin.com/in/davidteather/) message telling me what you enjoy in the course (and maybe what else you want to see in the future)
+* Submit PRs for suggestions/issues :)
 ## Course Catalogue
 0. [Introduction To The Course](/000-introduction/)
 1. [Introduction To Forging API Requests](/001-introduction-to-forging-api-requests/)
