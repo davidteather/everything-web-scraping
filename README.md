@@ -7,6 +7,8 @@ Learn everything web scraping by [David Teather](https://twitter.com/david_teath
 1. [Course Catalogue](#course-catalogue)
 2. [How To start The Mock Websites](#how-to-start-the-mock-websites)
 
+**Please** consider giving [Course Feedback](https://forms.gle/LjRwHoR34vD1knGa6)
+
 ## Welcome!
 
 Glad you're here! If it's your first time check out the the [introduction](./000-introduction/README.md), if not welcome back!
