@@ -1,0 +1,69 @@
+Get started
+Get started
+Account and profile
+Authentication
+Billing and payments
+Site policy
+Collaborative coding
+GitHub Codespaces
+Repositories
+Pull requests
+GitHub Discussions
+GitHub Copilot
+CI/CD and DevOps
+GitHub Actions
+GitHub Packages
+GitHub Pages
+Security
+Code security
+Supply chain security
+Security advisories
+Dependabot
+Code scanning
+Secret scanning
+Client apps
+GitHub CLI
+GitHub Desktop
+Project management
+GitHub Issues
+Search on GitHub
+Developers
+Developers
+REST API
+GraphQL API
+Enterprise and Teams
+Organizations
+Enterprise administrators
+Community
+Building communities
+GitHub Sponsors
+Education
+GitHub Support
+Introducción
+Configuración de Git
+En el corazón de GitHub es un sistema de control de versiones (VCS) de código abierto denominado Git. Git es responsable de todo lo relacionado con GitHub que ocurra localmente en el equipo.
+
+Conectar a GitHub con SSH
+Puedes conectarte a GitHub utilizando el Protocolo de Secure Shell (SSH), lo cual proporciona un canal seguro sobre una red insegura.
+
+Crear y administrar repositorios
+Puedes crear un repositorio en GitHub para almacenar y colaborar con los archivos de tu proyecto y luego administrar el nombre y ubicación del repositorio.
+
+Sintaxis de escritura y formato básicos
+Crear formatos sofisticados para tu prosa y código en GitHub con sintaxis simple.
+
+Popular
+Acerca de las solicitudes de incorporación de cambios
+Las solicitudes de incorporación de cambios te permiten comentarle a otros acerca de los cambios que has insertado en una rama de un repositorio en GitHub. Una vez que se abre una solicitud de incorporación de cambios, puedes debatir y revisar los posibles cambios con los colaboradores y agregar confirmaciones de seguimiento antes de que los cambios se fusionen en la rama base.
+
+Authentication
+Mantén la cuenta y los datos seguros con características como la autenticación en dos fases, SSH, y la verificación de la firma de comprobación.
+
+Agregar código hospedado localmente a GitHub
+Obtén información sobre cómo agregar código fuente o repositorios existentes a GitHub desde la línea de comandos mediante GitHub CLI o comandos de Git. A continuación, comparte el código e invita a otros usuarios a trabajar contigo.
+
+Administrar repositorios remotos
+Aprende a trabajar con tus repositorios locales en tu computadora y repositorios remotos alojados en GitHub.
+
+Documentación de GitHub Pages
+Descubre cómo crear un sitio web directamente desde un repositorio en GitHub.com. Explora herramientas de
