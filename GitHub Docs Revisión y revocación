@@ -1,0 +1,40 @@
+GitHub Docs
+Revisión y revocación de tokens de acceso personal en la organización
+En este artículo
+Acerca de la revisión y la revocación de un fine-grained personal access token
+Revisión y revocación de un fine-grained personal access token
+Los propietarios de la organización pueden revisar cualquier fine-grained personal access token que tenga acceso a la organización. También pueden revocar el acceso de un fine-grained personal access token específico.
+
+Nota: Los Fine-grained personal access token están actualmente en versión beta y están sujetos a cambios. Para dejar comentarios, consulta el debate sobre los comentarios.
+
+Durante la versión beta, las organizaciones deben participar en el uso de fine-grained personal access token. Si tu organización aún no participa, se te pedirá que participes y establezcas directivas siguiendo los pasos que se indican a continuación.
+
+Acerca de la revisión y la revocación de un fine-grained personal access token
+Los propietarios de la organización pueden ver cualquier fine-grained personal access token que tenga acceso a los recursos que pertenecen a la organización. Los propietarios de la organización también pueden revocar el acceso en función del fine-grained personal access token. Cuando se revoca un fine-grained personal access token, las claves SSH que haya creado el token seguirán funcionando y el token seguirá pudiendo leer los recursos públicos de la organización.
+
+Cuando se revoque un token, el usuario que lo creó recibirá una notificación por correo electrónico.
+
+Los propietarios de la organización solo pueden ver y revocar fine-grained personal access token, no personal access tokens (classic). A menos que la organización tenga acceso restringido por personal access tokens (classic), cualquier personal access token (classic) puede acceder a los recursos de la organización hasta que el token expire. Para obtener más información sobre cómo restringir el acceso por personal access tokens (classic), consulta "Establecimiento de una directiva de personal access token para la organización".
+
+Revisión y revocación de un fine-grained personal access token
+En la esquina superior derecha de GitHub.com, haga clic en la foto de perfil y luego en Your organizations.
+Opción Your organizations (Sus organizaciones) en el menú del perfil
+2. Junto a la organización, haga clic en Settings.
+El botón de configuración
+En la barra lateral izquierda, en  Personal access token , haz clic en Tokens activos. Se mostrará cualquier fine-grained personal access token que pueda acceder a la organización.
+Haz clic en el nombre del token que quieres revisar o revocar.
+Revisa el acceso y los permisos que tiene el token.
+Para revocar el acceso a la organización en función del token, haz clic en Revocar.
+Como alternativa, puedes revocar varios tokens a la vez:
+
+En la esquina superior derecha de GitHub.com, haga clic en la foto de perfil y luego en Your organizations.
+Opción Your organizations (Sus organizaciones) en el menú del perfil
+2. Junto a la organización, haga clic en Settings.
+El botón de configuración
+En la barra lateral izquierda, en  Personal access token , haz clic en Tokens activos. Se mostrará cualquier fine-grained personal access token que pueda acceder a la organización.
+Opcionalmente, usa filtros para mostrar solo determinados tokens.
+Usa la lista desplegable Propietario para filtrar los tokens por el miembro que los creó.
+Usa la lista desplegable Repositorio para filtrar los tokens por acceso al repositorio.
+Usa la lista desplegable Permisos para filtrar los tokens por permiso.
+Selecciona cada token que quieras revocar.
+Selecciona el menú desplegable Tokens seleccionados… y haz clic en Revocar…
