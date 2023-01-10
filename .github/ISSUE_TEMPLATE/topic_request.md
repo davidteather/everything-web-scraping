@@ -2,7 +2,7 @@
 name: Request A New Topic/Lesson
 about: What other topics do you want in this course?
 title: "[TOPIC REQUEST] - YOUR TOPIC HERE"
-labels: topic-request
+labels: ''
 assignees: ''
 
 ---
