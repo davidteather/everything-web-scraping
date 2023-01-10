@@ -1,0 +1,50 @@
+GitHub Docs
+Establecimiento de una directiva de token de acceso personal en la organización
+En este artículo
+Restricción del acceso mediante un fine-grained personal access token
+Aplicación de una directiva de aprobación de fine-grained personal access token
+Restricción del acceso mediante personal access tokens (classic)
+Los propietarios de organizaciones pueden controlar si permitir el uso de un fine-grained personal access token y de personal access tokens (classic), así como requerir aprobación para un fine-grained personal access token.
+
+Nota: Los Fine-grained personal access token están actualmente en versión beta y están sujetos a cambios. Para dejar comentarios, consulta el debate sobre los comentarios.
+
+Durante la versión beta, las organizaciones deben participar en el uso de fine-grained personal access token. Si tu organización aún no participa, se te pedirá que participes y establezcas directivas siguiendo los pasos que se indican a continuación.
+
+Restricción del acceso mediante un fine-grained personal access token
+Los propietarios de organizaciones pueden impedir que un fine-grained personal access token acceda a los recursos pertenecientes a la organización. Con ese Fine-grained personal access token seguirá siendo posible leer los recursos públicos dentro de la organización. Esta configuración solo controla el acceso mediante un fine-grained personal access token, no mediante personal access tokens (classic). Para obtener más información sobre cómo restringir el acceso mediante personal access tokens (classic), consulta "Restricción del acceso mediante personal access tokens (classic)" en esta página.
+
+En la esquina superior derecha de GitHub.com, haga clic en la foto de perfil y luego en Your organizations.
+Opción Your organizations (Sus organizaciones) en el menú del perfil
+2. Junto a la organización, haga clic en Settings.
+El botón de configuración
+En la barra lateral izquierda, en  Personal access token , haz clic en Configuración.
+En Fine-grained personal access token , selecciona la opción acorde a tus necesidades:
+Permitir el acceso mediante un fine-grained personal access token : se puede acceder a los recursos propiedad de la organización mediante un Fine-grained personal access token.
+Restringir el acceso mediante un fine-grained personal access token : no se puede acceder a los recursos propiedad de la organización mediante un Fine-grained personal access token. Las claves SSH creadas con un fine-grained personal access token seguirán funcionando.
+Haga clic en Save(Guardar).
+Aplicación de una directiva de aprobación de fine-grained personal access token
+Los propietarios de organizaciones pueden requerir la aprobación de cada fine-grained personal access token que puede acceder a la organización. Con ese Fine-grained personal access token se seguirán pudiendo leer recursos públicos dentro de la organización sin necesidad de aprobación. Un Fine-grained personal access token creado por los propietarios de la organización no necesitará aprobación.
+
+Nota: Solo están sujetos a aprobación los fine-grained personal access token, no los personal access tokens (classic). A menos que la organización tenga acceso restringido mediante personal access tokens (classic), cualquier personal access token (classic) puede acceder a los recursos de la organización sin aprobación previa. Para obtener más información, consulta "Restricción del acceso mediante personal access tokens (classic)" en esta página.
+
+En la esquina superior derecha de GitHub.com, haga clic en la foto de perfil y luego en Your organizations.
+Opción Your organizations (Sus organizaciones) en el menú del perfil
+2. Junto a la organización, haga clic en Settings.
+El botón de configuración
+En la barra lateral izquierda, en  Personal access token , haz clic en Configuración.
+En Requerir aprobación de fine-grained personal access token , selecciona la opción acorde a tus necesidades:
+Requerir aprobación del administrador: un propietario de organización debe aprobar cada fine-grained personal access token que puede acceder a la organización. Un Fine-grained personal access token creado por los propietarios de la organización no necesitará aprobación.
+No requerir aprobación del administrador: un Fine-grained personal access token creado por los miembros de la organización puede acceder a los recursos de la organización sin aprobación previa.
+Haga clic en Save(Guardar).
+Restricción del acceso mediante personal access tokens (classic)
+Los propietarios de organizaciones pueden impedir que los personal access tokens (classic) accedan a los recursos pertenecientes a la organización. Con esos Personal access tokens (classic) se seguirán pudiendo leer los recursos públicos dentro de la organización. Esta configuración solo controla el acceso mediante personal access tokens (classic), no con un fine-grained personal access token. Para obtener más información sobre cómo restringir el acceso mediante un fine-grained personal access token, consulta "Restricción del acceso mediante un fine-grained personal access token" en esta página.
+
+En la esquina superior derecha de GitHub.com, haga clic en la foto de perfil y luego en Your organizations.
+Opción Your organizations (Sus organizaciones) en el menú del perfil
+2. Junto a la organización, haga clic en Settings.
+El botón de configuración
+En la barra lateral izquierda, en  Personal access token , haz clic en Configuración.
+En Personal access token (classic) , selecciona la opción acorde a tus necesidades:
+Permitir el acceso mediante personal access tokens (classic) : los Personal access tokens (classic) pueden acceder a los recursos propiedad de la organización.
+Restringir el acceso mediante personal access tokens (classic) : los Personal access tokens (classic) no pueden acceder a los recursos propiedad de la organización. Las claves SSH creadas con personal access tokens (classic) seguirán funcionando.
+Haga clic en Save(Guardar).
