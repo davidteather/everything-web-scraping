@@ -1,0 +1,75 @@
+GitHub Docs
+Patrocinar a un colaborador de código abierto
+En este artículo
+Acerca de los patrocinios
+Información fiscal
+Patrocinar una cuenta
+Puedes generar un pago mensual recurrente para un desarrollador u organización que diseñe, cree, o mantenga los proyectos de código abierto de los que dependes.
+
+Who can use this feature
+Anyone can sponsor accounts on behalf of their own personal account. Organization owners and billing managers can sponsor accounts on behalf of their organization.
+
+Nota: El patrocinio en nombre de una organización se encuentra actualmente en versión beta y está sujeto a cambios.
+
+Acerca de los patrocinios
+Puedes patrocinar a cualquiera que tenga un perfil de desarrollador patrocinado o de organización patrocinada en nombre de tu cuenta personal o de una organización. Puedes elegir entre varios niveles de patrocinio, con cantidades de pago mensuales o de una sola ocasión y beneficios que configura la cuenta patrocinada. Tu patrocinio compartirá la fecha de facturación de tu cuenta, así como el método de pago y el recibo.
+
+Puedes patrocinar una cuenta en nombre de tu cuenta personal para invertir en los proyectos de los cuales te beneficies personalmente. Puedes patrocinar una cuenta en nombre de tu organización por varias razones.
+
+Mantener bibliotecas específicas de las cuales dependa el trabajo de tu organización
+Invertir en el ecosistema del cual dependes como organización (tal como blockchain)
+Desarrollar una conciencia de marca como una organización que valora el código abierto
+Agradecer a los desarrolladores de código abierto por crear bibliotecas que complementan el producto que ofrece tu organización
+Puedes utilizar una tarjeta de crédito para patrocinar una cuenta en GitHub. Si su organización quiere pagar por factura, puede leer más en Pagar GitHub Sponsors mediante la factura.
+
+GitHub Sponsors no cobra ninguna cuota por patrocinio de las cuentas personales, así que el 100 % de estos patrocinios van a la organización o al desarrollador patrocinado. No habrá la cueta de 10% para patrocinios de las organizaciones durante el beta. Para obtener más información, vea "Acerca de la facturación de GitHub Sponsors".
+
+Cuando patrocinas una cuenta utilizando una tarjeta de crédito, el cargo tomará efecto de inmediato. Si comienzas un patrocinio mensual en nombre de tu cuenta personal, inmediatamente se te cobrará una cantidad prorrateada por el tiempo hasta que llegue tu siguiente fecha de facturación habitual. Si estás patrocinando a alguien en nombre de una organización, puedes elegir pagar la cantidad prorrateada o hacer un pago completo mensual.
+
+Podemos compartir cierta información fiscal limitada con cuentas patrocinadas. Para obtener más información, consulta "Información fiscal".
+
+Puedes designar qué dirección de correo electrónico recibe actualizaciones de las cuentas que patrocina tu organización. Para obtener más información, vea "Administrar actualizaciones de cuentas que su organización patrocina".
+
+Puedes elegir si quieres mostrar tu patrocinio públicamente. Los patrocinios de una sola vez permanecen visibles durante un mes.
+
+Si la cuenta patrocinada retira tu nivel, éste permanecerá configurado hasta que elijas uno diferente o hasta que canceles tu suscripción. Para obtener más información, vea "Subir de categoría un patrocinador" y "Bajar de categoría un patrocinador".
+
+Si la cuenta que quieres patrocinar no tiene un perfil en GitHub Sponsors, puedes alentarla a que se una. Para más información, consulta "Configuración de GitHub Sponsors para la cuenta personal" y "Configuración de GitHub Sponsors para la organización".
+
+Generalmente, los patrocionios no se deducen de impuestos, pero pueden hacerlo en ciertos casos. Es responsabilidad del colaborador de código abierto patrocinado—y no así de GitHub— informar a los patrocinadores si las contribuciones se están realizando a una entidad libre de impuestos como un 501(c)(3), y si los patrocinios pueden ser deducibles de impuestos.
+
+Nota: GitHub no se hace responsable de la forma en la que los desarrolladores se representan a sí mismos y GitHub tampoco respalda ningún proyecto de código abierto patrocinado. Las alegaciones son responsabilidad total del desarrollador que recibe los fondos. Asegúrate de que confías en una persona antes de ofrecerle un patrocinio. Para obtener más información, vea GitHub Sponsors Términos adicionales.
+
+Información fiscal
+Como patrocinador, reconoces que podemos revelar al propietario de cada cuenta que patrocina la siguiente información limitada sobre tus pagos de patrocinio a la cuenta, desde el inicio del Programa de Patrocinadores:
+
+Fecha de transacción
+Importe pagado
+El país, el estado y la provincia desde donde se ha realizado el pago
+Si el pago lo ha realizado un negocio o una persona
+Esta información es necesaria para permitir el pago y la presentación de los impuestos derivados de dichos pagos de patrocinio.
+
+Patrocinar una cuenta
+Antes de que puedas patrocinar una cuenta, debes tener una dirección de correo electrónico verificada. Para obtener más información, vea "Comprobar la dirección de correo electrónico".
+
+En GitHub, navega al perfil del usuario u organización que quieras patrocinar.
+Navega a tu panel de patrocinios para la cuenta.
+Para patrocinar a un desarrollador, en su nombre haga clic en Sponsor (Patrocinar).
+Botón de patrocinar
+Para patrocinar una organización, haga clic en Sponsor (Patrocinar) a la derecha del nombre de la organización.
+Botón de patrocinar
+Opcionalmente, a la derecha de la página, para patrocinar una cuenta en nombre de su organización, utilice el menú desplegable Sponsor as (Patrocinar como) y haga clic en la organización.
+Menú desplegable para elegir la cuenta que patrocinará
+1. A la derecha del nivel que desee, haga clic en Seleccionar. Si quieres seleccionar una cantidad personalizada, ingresa la cantidad de patrocinio antes de hacer clic en "Seleccionar".
+Caja de selección de nivel
+1. Opcionalmente, si realiza el patrocinio como organización, para pagar una cantidad prorrateada en vez de hacer el pago mensual completo, haga clic en Pagar X,XX USD prorrateados en su lugar en "Total pendiente actual".
+Vínculo para pagar una cantidad prorrateada
+4. Dentro de "Billing information" (Información de facturación), revisa tus detalles de pago. Opcionalmente, para cambiar los detalles de pago de toda la cuenta de , haz clic en Editar. Después, sigue las instrucciones para completar el formulario de pago.
+Botón para editar el pago
+1. Elegir quién puede ver tu patrocinio.
+Botones de radio para elegir quién puede ver su patrocinio
+4. Decida si quiere recibir actualizaciones por correo electrónico de la cuenta patrocinada y, después, seleccione o anule la selección de "Recibir actualizaciones por correo electrónico de CUENTA".
+Casilla para recibir actualizaciones de la cuenta patrocinada
+1. Haga clic en Patrocinar CUENTA.
+Botón Patrocinar
+¿Le ayudó este documento?
