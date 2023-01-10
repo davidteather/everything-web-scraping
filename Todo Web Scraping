@@ -1,0 +1,41 @@
+Todo Web Scraping
+Aprenda todo sobre web scraping por David Teather , encuentre la serie de videos en YouTube .
+
+LinkedIn Patrociname Servidor de discordia  URL de Twitter
+
+Tabla de contenido
+Catálogo de cursos
+Cómo iniciar los sitios web simulados
+Considere dar su opinión sobre el curso
+
+¡Bienvenidos!
+¡Me alegro de que estés aquí! Si es tu primera vez, echa un vistazo a la introducción , si no, ¡bienvenido de nuevo!
+
+Considere patrocinarme en GitHub para hacer posible un trabajo como este
+
+Apoyando el proyecto
+Destacar el repositorio😎
+¿Quizás compartirlo con algunas personas nuevas en el web-scraping?
+Considere patrocinarme en GitHub
+Envíame un correo electrónico o un mensaje de LinkedIn diciéndome lo que disfrutas en el curso (y tal vez qué más te gustaría ver en el futuro)
+Envíe relaciones públicas para sugerencias/problemas :)
+Catálogo de cursos
+Introducción al curso
+Introducción a la falsificación de solicitudes de API
+Cómo iniciar los sitios web simulados
+Ejecute docker-compose upmientras está en un directorio de lecciones, cuando dice que el servidor de desarrollo comenzó a abrirse localhost:3000en su navegador para verificar que funciona correctamente.
+
+Cuando haya terminado con esta lección, puede control + ccerrar sus contenedores docker.
+
+Limpiar
+Con Escritorio Docker
+Navegue a la pestaña de contenedores en el costado, busque la lección que desea eliminar y haga clic en el icono de la papelera para eliminarla.
+Navegue a la pestaña de imágenes en el costado, busque las imágenes que comienzan con el nombre del curso para eliminar y presione la papelera.
+Con línea de comando
+Para eliminar contenedores, docker rm $(docker ps -a -q --filter name=XXX)donde XXX es el número de la lección que desea eliminar (por ejemplo, 001).
+Para eliminar imágenes, docker rmi $(docker images --filter label=lesson.number=X -a -q)donde X es el número que desea eliminar (ej: 1, ej: 10)
+Patrocine este proyecto
+@davidteather
+David Teatro David Teatro
+https://www.paypal.me/dteather
+Más información sobre los patrocinadores de GitHub
