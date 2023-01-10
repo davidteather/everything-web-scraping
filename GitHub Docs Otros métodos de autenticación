@@ -1,0 +1,46 @@
+GitHub Docs
+Otros métodos de autenticación
+En este artículo
+Autenticación básica
+Trabajar con la autenticación de dos factores
+Puedes utilizar la autenticación básica para hacer pruebas en un ambiente diferente al productivo.
+
+Aunque la API proporciona varios métodos para la autenticación, se recomienda encarecidamente usar OAuth para las aplicaciones de producción. Los otros métodos que se proporcionan están diseñados para utilizarse con scripts o pruebas (por ejemplo, en los casos en los que utilizar OAuth con su máximo rendimiento sería excesivo). Las aplicaciones de terceros que dependen de GitHub para la autenticación no solicitan ni recopilan las credenciales de GitHub. En su lugar, deben usar el flujo web de OAuth.
+
+Autenticación básica
+La API admite la autenticación básica tal como se define en RFC2617, con algunas pequeñas diferencias. La principal diferencia es que el RFC requiere que las solicitudes no autenticadas se respondan con respuestas de 401 Unauthorized. En muchos lugares, esto divulgaría la existencia de los datos de los usuarios. Para evitarlo, la API de GitHub responde con un 404 Not Found. Esto puede provocar problemas para las bibliotecas HTTP que asumen que la respuesta será 401 Unauthorized. La solución es crear manualmente el encabezado Authorization.
+
+Usando un personal access token
+Se recomienda usar un fine-grained personal access token para la autenticación en la API de GitHub.
+
+$ curl -u USERNAME:TOKEN https://api.github.com/user
+Este enfoque es útil si tus herramientas solo admiten la autenticación básica, pero quieres aprovechar las características de seguridad de personal access token.
+
+A través de nombre de usuario y contraseña
+Note: GitHub ha interrumpido la autenticación de contraseña en la API desde el 13 de noviembre de 2020 para todas las cuentas de GitHub.com, incluidas aquellas que pertenecen a planes GitHub Free, GitHub Pro, GitHub Team GitHub Enterprise Cloud. Ahora debes autenticarte en la API de GitHub con un token de API, como un token de acceso de OAuth, un token de acceso de instalación de una aplicación de GitHub o personal access token, según lo que necesites hacer con el token. Para obtener más información, consulte "Solución de problemas".
+
+Autenticarse con el SSO de SAML
+Nota: Las integraciones y aplicaciones de OAuth que generan tokens en nombre de otros usuarios se autorizan automáticamente.
+
+Nota: En la mayoría de los casos, puedes usar Authorization: Bearer o Authorization: token para pasar un token. Sin embargo, si vas a pasar un token web JSON (JWT), debes usar Authorization: Bearer.
+
+Si usas la API para acceder a una organización que exige el uso de SSO de SAML para la autenticación, debes crear un personal access token y autorizar el token para esa organización. Visite la dirección URL especificada en X-GitHub-SSO para autorizar el token para la organización.
+
+$ curl -v -H "Authorization: Bearer TOKEN" https://api.github.com/repos/octodocs-test/test
+
+> X-GitHub-SSO: required; url=https://github.com/orgs/octodocs-test/sso?authorization_request=AZSCKtL4U8yX1H3sCQIVnVgmjmon5fWxks5YrqhJgah0b2tlbl9pZM4EuMz4
+{
+  "message": "Resource protected by organization SAML enforcement. You must grant your personal token access to this organization.",
+  "documentation_url": "https://docs.github.com"
+}
+Al solicitar datos que podrían venir de varias organizaciones (por ejemplo, solicitar una lista de incidencias creadas por el usuario), el encabezado X-GitHub-SSO indica qué organizaciones requieren que autorices el personal access token:
+
+$ curl -v -H "Authorization: Bearer TOKEN" https://api.github.com/user/issues
+
+> X-GitHub-SSO: partial-results; organizations=21955855,20582480
+El valor organizations es una lista separada por comas de los identificadores de las organizaciones que requieren la autorización de tu personal access token.
+
+Trabajar con la autenticación de dos factores
+Cuando tienes habilitada la autenticación en dos fases, la autenticación básica de la mayoría de los puntos de conexión de la API REST requiere el uso de un personal access token.
+
+Puedes generar un personal access token usando la configuración del desarrollador de GitHub. Para obtener más información, consulta "Creación de un personal access token para la línea de comandos". A continuación, podría usar estos tokens para autenticarse mediante el token de OAuth con la API de GitHub.
