@@ -1,0 +1,102 @@
+GitHub Docs
+Acerca de las apps
+En este artículo
+Acerca de las GitHub Apps
+Acerca de las OAuth Apps
+Personal access token
+Determinar qué integración debes crear
+Solicitar soporte
+Puedes crear integraciones con las API de GitHub para agregar flexibilidad y reducir la fricción en tu propio flujo de trabajo. También puedes compartir las integraciones con otros en GitHub Marketplace..
+
+Las apps en GitHub te permiten automatizar y mejorar tu flujo de trabajo. Puedes compilar aplicaciones para mejorar tu flujo de trabajo. También puedes compartir o vender aplicaciones en GitHub Marketplace. Para aprender a mostrar una aplicación en GitHub Marketplace, consulta "Comenzar con GitHub Marketplace".
+
+Las GitHub Apps son la forma oficial y recomendada de integrarse con GitHub, ya que ofrecen permisos mucho más granulares para acceder a los datos, Pero GitHub es compatible tanto con las OAuth Apps y con las GitHub Apps. Para obtener información sobre cómo elegir un tipo de aplicación, consulta "Diferencias entre las aplicaciones de GitHub y las aplicaciones de OAuth".
+
+Si usa la aplicación con Acciones de GitHub y quiere modificar los archivos de flujo de trabajo, debe autenticarse en nombre del usuario con un token de OAuth que incluya el ámbito workflow. El usuario debe tener permisos de administrador o de escritura en el repositorio que contiene el archivo de flujo de trabajo. Para más información, vea "Descripción de los ámbitos para las aplicaciones de OAuth".
+
+Para obtener una guía detallada del proceso de creación de una GitHub App, consulta la sección "Crear tu primera GitHub App".
+
+Acerca de las GitHub Apps
+Las GitHub Apps son actores de primera clase dentro de GitHub. Una GitHub App actúa por si misma, tomando las acciones a través de la API y utilizando directamente su propia identidad, lo que significa que no necesitas mantener un bot o cuenta de servicio como un usuario separado.
+
+Las GitHub Apps se pueden instalar directamente en las cuentas de organización y personales, y se les puede dar acceso a repositorios específicos. Vienen con webhooks integrados y con permisos específicos y delimitados. Cuando configuras tu GitHub App, puedes seleccionar los repositorios a los cuales quieres acceder. Por ejemplo, puedes configurar una aplicación denominada MyGitHub que escriba incidencias en el repositorio octocat y solo en el repositorio octocat. Para instalar una GitHub App, necesitas ser propietario de la organización o tener permisos administrativos en el repositorio.
+
+Predeterminadamente, solo los propietarios de la organización pueden administrar los ajustes de las GitHub Apps en una organización. Para agregar usuarios adicionales para que administren las GitHub Apps en una organización, un propietario puede otorgarles permisos de administrador sobe ellas. Vea "Administradores de aplicaciones de GitHub" para obtener información sobre cómo agregar y quitar administradores de aplicaciones de GitHub de la organización.
+
+Las GitHub Apps son aplicaciones que necesitan hospedarse en algún lugar. Para obtener instrucciones paso a paso que cubran los temas de servidores y hospedaje, consulta la sección "Crear tu primera GitHub App".
+
+Para mejorar tu flujo de trabajo, puedes crear una GitHub App que contenga varios scripts, o bien, una aplicación completa, y después conectarla a muchas otras herramientas. Por ejemplo, puedes conectar las GitHub Apps a GitHub, Slack, a otras apps locales que tuvieras, programas de correo electrónico, o incluso a otras API.
+
+Toma estas ideas en consideración cuando crees GitHub Apps:
+
+Un usuario u organización puede poseer hasta 100 aplicaciones de GitHub.
+
+Una GitHub App debe realizar acciones independientemente de un usuario (a menos que la aplicación use un token de usuario a servidor ). Para mantener más seguros los tokens de acceso de usuario a servidor, puedes utilizar tokens de acceso que caducarán después de 8 horas, y un token de actualización que se puede intercambiar por un token de acceso nuevo. Para obtener más información, consulte "Actualizar los tokens de acceso de usuario a servidor".
+
+Asegúrate de que la GitHub App se integre con repositorios específicos.
+
+La GitHub App deberá conectarse a una cuenta personal o a una organización.
+
+No esperes que la GitHub App sepa y haga todo lo que puede hacer un usuario.
+
+No utilices a la GitHub App si solo necesitas el servicio de "Iniciar sesión en GitHub". Pero una GitHub App puede usar un flujo de identificación de usuario para registrar usuarios y hacer otras cosas.
+
+No crees una GitHub App si únicamente quieres actuar como usuario de GitHub y hacer todo lo que puede hacer un usuario.
+
+Si usa la aplicación con Acciones de GitHub y quiere modificar los archivos de flujo de trabajo, debe autenticarse en nombre del usuario con un token de OAuth que incluya el ámbito workflow. El usuario debe tener permisos de administrador o de escritura en el repositorio que contiene el archivo de flujo de trabajo. Para más información, vea "Descripción de los ámbitos para las aplicaciones de OAuth".
+
+Para empezar a desarrollar GitHub Apps, comienza con "Crear una GitHub App". Para aprender a usar los manifiestos de las GitHub App, que permitan a otras personas crear GitHub Apps preconfiguradas, consulta "Crear GitHub Apps a partir de un manifiesto".
+
+Acerca de las OAuth Apps
+OAuth2 es un protocolo que permite a las aplicaciones externas el solicitar autorización para usar detalles privados en una cuenta de GitHub del usuario sin acceder a su contraseña. Estas son preferentes sobre la Autenticación Básica, ya que los tokens pueden limitarse a ciertos tipos de datos y los usuarios pueden revocarlos en cualquier momento.
+
+Advertencia: Si revocas todos los permisos de una OAuth App, se eliminarán todas las claves generadas por la aplicación en nombre del usuario, incluidas las claves de implementación.
+
+Una OAuth App utiliza a GitHub como proveedor de identidad para autenticarse como el usuario que otorga el acceso a la app. Esto significa que, cuando un usuario otorga acceso a una OAuth App, también otorga permisos a todos los repositorios a los cuales tiene acceso en su cuenta, y también a cualquier organización a la que pertenezca que no haya bloqueado el acceso de terceros.
+
+Crear una OAuth App es una buena opción si estás creando procesos más complejos de lo que puede manejar un script sencillo. Nota que las OAuth Apps son aplicaciones que necesitan hospedarse en algún lugar.
+
+Toma estas ideas en consideración cuando crees OAuth Apps:
+
+Un usuario u organización puede poseer hasta 100 aplicaciones OAuth.
+Una OAuth App siempre debe actuar como el usuario autenticado de GitHub a través de todo GitHub (por ejemplo, cuando proporciona notificaciones de usuario).
+Una OAuth App puede utilizarse como un proveedor de identidad si el usuario autenticado habilita la opción de "Ingresar con GitHub".
+No crees una OAuth App si quieres que tu aplicación actúe en un solo repositorio. Con el alcance de OAuth de repo, las OAuth Apps podrán actuar en todos los repositorios del usuario autenticado.
+No crees una OAuth App para que actúe como una aplicación para tu equipo o compañía. Las OAuth Apps se autentican como un solo usuario, así que, si una persona crea una OAuth App para el uso de una compañía, y luego salen de dicha compañía, nadie más tendrá acceso a ella.
+Si estás utilizando tu aplicación de OAuth con GitHub Actions y quieres modificar tus archivos de flujo de trabajo, tu token de OAuth debe tener el alcance workflow y el usuario debe tener permisos de escritura o de lectura para el repositorio que contiene dichos archivos de flujo de trabajo. Para obtener más información, consulta "Alcances para las Apps de OAuth".
+Para obtener más información sobre OAuth Apps, consulta "Crear una OAuth App" y "Registro de la aplicación".
+
+Personal access token
+Un personal access token es una cadena de caracteres que funciona de forma similar a un token de OAuth en el sentido de que puedes especificar sus permisos mediante ámbitos. Un personal access token también es similar a una contraseña, pero puedes tener varios de ellos y revocar el acceso de cada uno en cualquier momento.
+
+Por ejemplo, puedes permitir que un personal access token escriba en tus repositorios. Si después ejecutas un comando cURL o escribes un script que genera una incidencia en tu repositorio, pasarías e personal access token para la autenticación. Puedes almacenar el personal access token como una variable de entorno para evitar tener que escribirlo cada vez que lo uses.
+
+Ten en cuenta lo siguiente cuando uses un personal access token:
+
+Recuerda utilizar este token para que te represente únicamente a ti.
+Puedes realizar solicitudes cURL de una sola ocasión.
+Puedes ejecutar scripts personales.
+No configures un script para que lo utilice todo tu equipo o compañía.
+No configures una cuenta personal compartida para que actúe como un usuario de bot.
+Concede al token los privilegios mínimos que necesite.
+Establece una expiración para el personal access token, con el fin de ayudar a mantener la información segura.
+Determinar qué integración debes crear
+Antes de que comiences a crear integraciones, necesitas determinar la mejor forma de acceder, autenticar, e interactuar con las API de GitHub. En la imagen siguiente encontrarás algunas preguntas que deberías plantearte cuando decidas si vas a usar un personal access token, GitHub Apps o OAuth Apps para la integración.
+
+Introducción al flujo de preguntas de apps
+
+Considera estas preguntas acerca de cómo necesita comportarse tu integración y a qué necesita acceder:
+
+¿Mi integración actuará únicamente como yo, o actuará más como una aplicación?
+¿Quiero que actúe independientemente de mí como su propia entidad?
+¿Accederá a todo lo que yo puedo acceder, o quiero limitar su acceso?
+¿Es simple o compleja? Por ejemplo, un personal access token es una buena opción para scripts simples y cURL, mientras que una OAuth App puede controlar scripts más complejos.
+Solicitar soporte
+Para las preguntas, reportes de errores y debates sobre las GitHub Apps, OAuth Apps y el desarrollo de la API, explora el . Los debates se moderan y mantienen con el personal de GitHub, pero no se garantiza que el personal de GitHub responda las preguntas que se publiquen en el foro.
+
+Considera la posibilidad de ponerse en contacto con Soporte de GitHub directamente mediante el formulario de contacto para:
+
+respuestas garantizadas del personal de GitHub
+solicitudes de soporte que involucren preocupaciones sobre datos sensibles o privados
+solicitudes de características
+retroalimentación sobre los productos de GitHub
