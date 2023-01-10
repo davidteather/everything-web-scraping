@@ -1,0 +1,119 @@
+GitHub Docs
+Creación de un token de acceso personal
+En este artículo
+Acerca del personal access token
+Creación de un fine-grained personal access token
+Creación de un personal access token (classic)
+Usar un token en la línea de comando
+Información adicional
+Puedes crear un personal access token para usarlo en lugar de una contraseña con la línea de comandos o con la API.
+
+Advertencia: Trata los tokens de acceso como si fueran contraseñas.
+
+Para acceder a GitHub desde la línea de comandos, considera la posibilidad de usar la GitHub CLI o el Administrador de credenciales de Git, en lugar de crear un personal access token.
+
+Al usar un personal access token en un script, considera la posibilidad de almacenar el token como un secreto y ejecutar el script a través de GitHub Actions. Para obtener más información, consulta "Secretos cifrados". También puedes almacenar el token como un secreto de Codespaces y ejecutar el script en Codespaces. Para más información, consulta "Administración de secretos cifrados para los codespaces"
+
+Si estas opciones no son posibles, considera la posibilidad de usar otro servicio como la CLI de 1Password para almacenar el token de forma segura.
+
+Acerca del personal access token
+Un Personal access token es una alternativa al uso de contraseñas para la autenticación en GitHub cuando se usa la API de GitHub o la línea de comandos. El Personal access token está diseñado para acceder a los recursos de GitHub en tu nombre. Para acceder a los recursos en nombre de una organización, o en el caso de las integraciones de larga duración, debes usar una GitHub App. Para más información, consulte "Acerca de las actualizaciones".
+
+GitHub admite actualmente dos tipos de personal access token: fine-grained personal access token y personal access tokens (classic). GitHub recomienda usar un fine-grained personal access token siempre que sea posible, en lugar de personal access tokens (classic). El Fine-grained personal access token tiene varias ventajas de seguridad con respecto a los personal access tokens (classic):
+
+Cada token solo puede acceder a los recursos que pertenecen a un único usuario u organización.
+Cada token solo puede acceder a repositorios específicos.
+A cada token se le conceden permisos específicos, que ofrecen más control que los ámbitos concedidos a los personal access tokens (classic).
+Cada token debe tener una fecha de expiración.
+Los propietarios de la organización pueden requerir la aprobación de cualquier fine-grained personal access token que pueda acceder a los recursos de la organización.
+Además, los propietarios de la organización pueden restringir el acceso del personal access token (classic) a su organización.
+
+Nota: Actualmente, algunas características solo funcionan con personal access tokens (classic):
+
+Solo los personal access tokens (classic) tienen acceso de escritura para los repositorios públicos que no son propiedad tuya o de una organización de la que no eres miembro.
+Los colaboradores externos solo pueden usar personal access tokens (classic) para acceder a los repositorios de la organización en los que son colaboradores.
+Las siguientes API solo admiten personal access tokens (classic). Para obtener una lista de las operaciones de la API REST que se admiten para fine-grained personal access token, consulta "Puntos de conexión disponibles para fine-grained personal access token".
+GraphQL API
+API REST para la administración de importaciones de origen
+API REST para la administración de Projects (classic)
+API REST para la administración de GitHub Packages
+API REST para la administración de notificaciones
+API REST para la transferencia de un repositorio
+API REST para la creación de un repositorio a partir de una plantilla
+API REST para la creación de un repositorio para un usuario autenticado
+Como precaución de seguridad, GitHub quita automáticamente los tokens de acceso personales que no se han usado durante un año. Para proporcionar más seguridad, te recomendamos que agregues una expiración a tus tokens de acceso personales.
+
+Creación de un fine-grained personal access token
+Nota: Los Fine-grained personal access token están actualmente en versión beta y están sujetos a cambios. Para dejar comentarios, consulta el debate sobre los comentarios.
+
+Verifica tu dirección de correo electrónico, si todavía no lo has hecho. 1. En la esquina superior derecha de cualquier página, haga clic en la foto del perfil y, luego, en Settings (Configuración).
+
+Icono Settings (Parámetros) en la barra de usuario
+En la barra lateral izquierda, haga clic en  Developer settings (Configuración de desarrollador).
+
+En la barra lateral izquierda, en  Personal access token , haz clic en Tokens específicos.
+
+Haga clic en Generate new token (Generar nuevo token).
+
+Opcionalmente, en Nombre del token, escribe un nombre para el token.
+
+En Expiración, selecciona cuándo expirará el token.
+
+Opcionalmente, en Descripción, agrega una nota para describir el propósito del token.
+
+En Propietario del recurso, selecciona un propietario del recurso. El token solo podrá acceder a los recursos que pertenecen al propietario del recurso seleccionado. Las organizaciones a las que pertenezcas no aparecerán a menos que hayan optado por el uso de un fine-grained personal access token. Para obtener más información, consulta "Establecimiento de una directiva de personal access token para la organización".
+
+Opcionalmente, si el propietario del recurso es una organización que requiere aprobación para el uso de un fine-grained personal access token, escribe una justificación para la solicitud en el cuadro que aparece debajo del propietario del recurso.
+
+En Acceso al repositorio, selecciona los repositorios a los que quieres que acceda el token. Debes elegir el acceso mínimo al repositorio que satisfaga tus necesidades. Los tokens siempre incluyen acceso de solo lectura a todos los repositorios públicos de GitHub.
+
+Si elegiste Solo repositorios seleccionados en el paso anterior, en la lista desplegable Repositorios seleccionados, elige los repositorios a los que quieres que acceda el token.
+
+En Permisos, selecciona los permisos que se concederán al token. En función del propietario del recurso y del acceso al repositorio que hayas especificado, hay permisos de repositorio, de organización y de cuenta. Debes elegir los permisos mínimos que necesites. Para obtener más información sobre los permisos necesarios para cada operación de la API REST, consulta "Permisos necesarios para el fine-grained personal access token".
+
+Haga clic en Generar token.
+
+Si seleccionaste una organización como propietario del recurso y la organización requiere aprobación para el fine-grained personal access token, el token se marcará como pending hasta que lo revise un administrador de la organización. El token solo podrá leer los recursos públicos hasta que se apruebe. Si eres propietario de la organización, tu solicitud se aprobará automáticamente. Para obtener más información, consulta "Revisión y revocación de un personal access token en la organización".
+
+Creación de un personal access token (classic)
+Nota: Los propietarios de la organización pueden restringir el acceso del personal access token (classic) a la organización. Si intentas usar un personal access token (classic) para acceder a los recursos de una organización que ha deshabilitado el acceso del personal access token (classic), se producirá un error en la solicitud con una respuesta 403. En su lugar, debes usar una GitHub App, una OAuth App o un fine-grained personal access token.
+
+Nota: Tu personal access token (classic) puede acceder a todos los repositorios a los que tengas acceso. GitHub recomienda usar en su lugar un fine-grained personal access token, que puedes restringir a repositorios específicos. En un Fine-grained personal access token también puedes establecer permisos específicos, en lugar de ámbitos amplios.
+
+Verifica tu dirección de correo electrónico, si todavía no lo has hecho. 1. En la esquina superior derecha de cualquier página, haga clic en la foto del perfil y, luego, en Settings (Configuración).
+
+Icono Settings (Parámetros) en la barra de usuario
+En la barra lateral izquierda, haga clic en  Developer settings (Configuración de desarrollador).
+
+En la barra lateral izquierda, en  Personal access token , haz clic en Tokens (clásicos) . 1. Selecciona Generar nuevo token y, luego, haz clic en Generar nuevo token (clásico) .
+
+Asígnale a tu token un nombre descriptivo.
+Campo para la descripción del token
+
+Para asignar una expiración al token, seleccione el menú desplegable Expiración y, después, haga clic en un valor predeterminado, o bien use el selector de calendario.
+Campo para la expiración del token
+
+Selecciona los ámbitos que quieres concederle a este token. A fin de usar el token para acceder a repositorios desde la línea de comandos, seleccione repo. Un token sin alcances asignados solo puede acceder a información pública. Para más información, vea "Ámbitos disponibles".
+Selección de ámbitos de token
+Haga clic en Generar token.
+Botón Generar token
+Token recién creado
+Para usar tu token para acceder a los recursos que pertenecen a una organización que usa el inicio de sesión único de SAML, autoriza el token. Para obtener más información, consulta "Autorización de un personal access token para usarlo con el inicio de sesión único de SAML" en la documentación de GitHub Enterprise Cloud.
+
+Usar un token en la línea de comando
+Una vez que tengas un token, puedes ingresarlo en lugar de tu contraseña cuando realices operaciones de Git a través de HTTPS.
+
+Por ejemplo, en la línea de comando ingresarás lo siguiente:
+
+$ git clone https://github.com/username/repo.git
+Username: your_username
+Password: your_token
+El Personal access token solo se puede usar para las operaciones HTTPS de Git. Si en el repositorio se usa una dirección URL remota SSH, tendrá que cambiarlo de SSH a HTTPS.
+
+Si no se te solicita tu nombre de usuario y contraseña, tus credenciales pueden estar almacenadas en la caché de tu computadora. Puede actualizar las credenciales en la cadena de claves para reemplazar la contraseña antigua por el token.
+
+En lugar de escribir manualmente el personal access token para cada operación HTTPS de Git, puedes almacenar en caché el personal access token con un cliente de Git. Git almacenará tus credenciales temporalmente en la memoria hasta que haya pasado un intervalo de vencimiento. También puedes almacenar el token en un archivo de texto simple que pueda leer Git antes de cada solicitud. Para más información, vea "Almacenamiento en caché de las credenciales de GitHub en Git".
+
+Información adicional
+"Acerca de la autenticación en GitHub"
+"Expiración y revocación de tokens"
