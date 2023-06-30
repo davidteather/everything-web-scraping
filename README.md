@@ -35,6 +35,9 @@ If you don't want to deal with installing and configuring software, I've set up 
 > Note: A free GitHub account comes with 60 hours of Codespaces free each month, and if you're a student you can get 90 hours free each month with GitHub Pro through the [GitHub Student Developer Pack](https://education.github.com/pack) ([source](https://github.com/features/codespaces))
 
 #### Creating A Codespace
+> If you want to save your solutions, [create a fork](https://github.com/davidteather/everything-web-scraping/fork) then create a Codespace from your own fork, then you'll be able to use git to save your changes.
+
+Create a Codespace using the instructions below or [here](https://github.com/codespaces/new)
 <div align="center">
   <img src="./assets/codespaces-new-with-options.png">
   <p>Select Code -> Codespaces Tab -> The + Icon -> New With Options</p>
@@ -46,8 +49,6 @@ If you don't want to deal with installing and configuring software, I've set up 
   <p>Select the configuration of the lesson you're on, and after hitting create a Codespace</p>
   <p>VS Code editor will open in the browser and start all programs needed for the activity!</p>
 </div>
-
-
 
 #### Cleaning Up
 
