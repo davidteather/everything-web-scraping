@@ -14,10 +14,15 @@ services:
     build:
       context: ./website/client
     container_name: lesson-001-client
+    depends_on:
+      - server
+      - db
     environment:
       REACT_APP_WEBSITE_NAME: Social
-      REACT_APP_BACKEND_HOST: localhost # Since requests come from browser not docker, since SSR not currently used
+      REACT_APP_BACKEND_HOST: localhost
       REACT_APP_BACKEND_PORT: 8080
+      REACT_APP_CODESPACE_NAME: ${CODESPACE_NAME}
+      REACT_APP_GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN: ${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}
     ports:
       - 3000:3000
 

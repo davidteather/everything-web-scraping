@@ -1,0 +1,20 @@
+{
+    "workspaceFolder": "/workspaces/everything-web-scraping-private/001-introduction-to-forging-api-requests",
+    "image": "mcr.microsoft.com/devcontainers/universal",
+    "postStartCommand": "docker compose up -d && gh codespace ports visibility 8080:public -c $CODESPACE_NAME",
+    "forwardPorts": [5434, 3000, 8080],
+    "portsAttributes": {
+        "5434": {
+            "label": "postgres",
+            "onAutoForward": "silent"
+        },
+        "3000": {
+            "label": "Website",
+            "onAutoForward": "openBrowser"
+        },
+        "8080": {
+            "label": "Backend",
+            "onAutoForward": "silent"
+        }
+    }
+}

@@ -1,5 +1,8 @@
-const BACKEND_URL = `http://${process.env.REACT_APP_BACKEND_HOST}:${process.env.REACT_APP_BACKEND_PORT}`
+const isCodespaces = process.env.REACT_APP_CODESPACE_NAME != "" && process.env.REACT_APP_GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN != "";
 
+const BACKEND_URL = isCodespaces
+    ? `https://${process.env.REACT_APP_CODESPACE_NAME}-${process.env.REACT_APP_BACKEND_PORT}.${process.env.REACT_APP_GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}`
+    : `http://${process.env.BACKEND_HOST}:${process.env.BACKEND_PORT}`;
 
 export async function getProfiles(page) {
     try{
