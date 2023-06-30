@@ -43,7 +43,8 @@ If you don't want to deal with installing and configuring software, I've set up 
 
 <div align="center">
   <img src="./assets/codespaces-select-configuration.png">
-  <p>Select the configuration of the lesson you're on</p>
+  <p>Select the configuration of the lesson you're on, and after hitting create a Codespace</p>
+  <p>VS Code editor will open in the browser and start all programs needed for the activity!</p>
 </div>
 
 
