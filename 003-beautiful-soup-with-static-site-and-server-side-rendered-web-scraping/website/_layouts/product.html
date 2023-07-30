@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<div class="content">
+	<section class="page">
+		<div class="container">
+			<div class="product-container">
+				{% include product-styles.html product=page %}
+				<div class="product-details" id="add">
+					<h3>{{ page.name }}</h3>
+					<div class="product-rating">
+						<div class="star-rating">
+						  	{% for i in (1..5) %}
+								{% if i <= page.avg_rating %}
+								<span class="fa fa-star checked"></span>
+								{% else %}
+								<span class="fa fa-star unchecked"></span>
+								{% endif %}
+							{% endfor %}
+						</div>
+						<div class="rating-count">({{ page.reviews.size }} ratings)</div>
+					  </div>
+					  
+					
+					{{ page.description_markdown | markdownify }}
+
+					<p id="material">{{ page.material }}</p>
+
+					<h4>${{ page.price }}</h4>
+
+					{% if page.in_stock %}
+
+					<div class="button">{% include snipcart-button.html product=page %}</div>
+
+					{% else %}
+					<div class="button btn-secondary"><b>Out of Stock</b></div>
+					{% endif %}
+					
+					
+				</div>
+
+
+				<div class="product-reviews">
+					<h4>Reviews</h4>
+				
+				
+					<div class="product-ratings">
+						{% for review in page.reviews %}
+						<div class="product-rating">
+							<div class="star-rating">
+							<span class="rating-number">{{ review.rating }}</span>
+							{% for i in (1..5) %}
+									{% if i <= review.rating %}
+									<span class="fa fa-star checked"></span>
+									{% else %}
+									<span class="fa fa-star unchecked"></span>
+									{% endif %}
+								{% endfor %}
+							</div>
+							<div class="rating-title">{{ review.title }}</div>
+							<div class="rating-review">{{ review.review }}</div>
+						</div>					  
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />

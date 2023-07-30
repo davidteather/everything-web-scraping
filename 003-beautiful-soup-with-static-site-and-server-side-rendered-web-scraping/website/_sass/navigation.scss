@@ -1,0 +1,156 @@
+@media #{$below-mid-point} {
+	.nav-open {
+
+		nav {
+			border: 0;
+			z-index: 2;
+
+			a {
+				display: block;
+			}
+		}
+	}
+}
+
+header {
+	color: #fff;
+	padding: 20px 0 59px 0;
+	background: linear-gradient(135deg, $brand-color 0%, $brand-color-2 100%);
+	position: relative;
+
+	p {
+		margin: 0;
+	}
+	@media #{$mid-point} {
+		&:before, &:after {
+			content: "";
+			width: 25%;
+			display: block;
+			position: absolute;
+			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+			transform: translate(-50%, 0);
+
+		}
+
+		&:before {
+			transform: skewX(-15deg);
+			box-shadow: 99px 29px 170px -24px rgba(0,0,0,.05);
+			top: -254px;
+			bottom: 50%;
+			left: 43%
+		}
+
+		&:after {
+			box-shadow: inset 92px -41px 104px -28px rgba(0,0,0,.05);
+			transform: skewX(-12deg);
+			top: 47%;
+			left: 40%;
+			bottom: -121px;
+		}
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		z-index: 1;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+nav {
+	width: 100%;
+	padding: 20px 0 0 0;
+
+	@media #{$mid-point} {
+		display: inline-block;
+		vertical-align: top;
+		width: auto;
+		padding: 0 0 0 40px;
+	}
+
+	a {
+		margin: 0 3px;
+		padding: 20px 10px;
+		border-bottom: 1px solid rgba(255,255,255,0);
+		color: rgba(255,255,255,.6);
+		transition: 200ms ease-in color;
+		display: none;
+
+		@media #{$mid-point} {
+			display: inline-block;
+			padding: 10px;
+		}
+
+
+		&.nav-toggle {
+			display: inline;
+			position: absolute;
+			right: 0;
+			top: -22px;
+			font-size: 1.9em;
+			border: 0;
+			z-index: 2;
+			padding: 20px;
+
+			@media #{$mid-point} {
+				display: none;
+			}
+
+			&:hover {
+				border: 0;
+			}
+		}
+	}
+
+	a:hover {
+		color: #fff;
+	}
+
+
+	a.cart {
+		line-height: 1;
+
+		i {
+			font-size: 22px;
+			line-height: 1;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 6px;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			top: 2px;
+
+		}
+	}
+
+	@media #{$mid-point} {
+		a.cart {
+			border-radius: 43px;
+			color: #fff;
+			border: 1px solid rgba(255,255,255, .4);
+			position: absolute;
+			right: 20px;
+			top: -2px;
+			font-size: .8em;
+			transition: border .3s ease;
+
+
+			&:hover {
+				border-color: #fff;
+			}
+		}
+	}
+
+	a.active {
+		color: #fff;
+	}
+
+}

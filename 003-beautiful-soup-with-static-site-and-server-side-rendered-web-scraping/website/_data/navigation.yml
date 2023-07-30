@@ -1,0 +1,12 @@
+- name: Products
+  link: /
+  new_window: false
+  highlight: false
+- name: Our Story
+  link: /about/
+  new_window: false
+  highlight: false
+- name: Contact
+  link: /contact/
+  new_window: false
+  highlight: false

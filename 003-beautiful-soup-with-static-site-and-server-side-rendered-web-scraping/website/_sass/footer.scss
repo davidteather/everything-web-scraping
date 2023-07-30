@@ -1,0 +1,132 @@
+footer {
+	padding: 50px 0 50px 0;
+	font-size: 1.1.1rem;
+	position: relative;
+	border: 1px solid #eee;
+
+	.copyright {
+		font-size: .9rem;
+		margin: 20px auto 0;
+	}
+
+	h2 {
+		font-size: 1.4rem;
+		margin: 30px 0;
+	}
+
+	.footer-columns {
+		@media #{$mid-point} {
+			display: flex;
+		}
+		@include flex-flow(wrap);
+		list-style: none;
+		padding: 0;
+
+		@media #{$mid-point} {
+			margin: -10px -60px 10px -60px;
+		}
+
+		& > li {
+			@media #{$mid-point} {
+				flex: 1;
+				padding: 0 60px;
+			}
+
+			box-sizing: border-box;
+
+			&.footer-nav {
+				@media #{$mid-point} {
+					flex: 0;
+				}
+			}
+			ul {
+				padding: 0;
+				list-style: none;
+				li {
+					font-size: 1.1rem;
+					margin: 11px 0;
+					a {
+						white-space: nowrap;
+						color: #999;
+					}
+				}
+			}
+		}
+
+		.about {
+			svg path {
+				fill: $brand-color;
+			}
+		}
+
+		p {
+			font-size: 1.1rem;
+			color: #999;
+		}
+
+		.email {
+			margin: 0;
+		}
+
+		h4 {
+			margin: 0 0 1.1rem 0;
+			font-size: .9em;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.social-icons {
+	svg {
+		width: 100%;
+		height: 100%;
+
+		&, path {
+			fill: #fff;
+		}
+	}
+
+	a {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		padding: 8px;
+		line-height: 0;
+		margin: 0 10px 20px 0;
+		border-radius: 50px;
+		&.email {
+			background-color: #ff9d09;
+		}
+
+		&.facebook {
+			background-color: #3b5998;
+		}
+
+		&.twitter {
+			background-color: #55acee;
+		}
+
+		&.google-plus {
+			background-color: #db4437;
+		}
+
+		&.youtube {
+			background-color: #cd201f;
+		}
+
+		&.instagram {
+			background-color: #f167f5;
+		}
+
+		&.linkedin {
+			background-color: #0077b5;
+		}
+
+		&.pinterest {
+			background-color: #C92228;
+		}
+	}
+}

@@ -1,0 +1,157 @@
+.container, .text-container {
+	margin: 0 auto;
+	position: relative;
+	padding: 0 20px;
+}
+
+.text-container {
+	max-width: 750px;
+}
+
+.container {
+	max-width: 1140px;
+
+	&.max-container {
+		max-width: 100%;
+		padding: 0;
+	}
+}
+
+.hero {
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+	z-index: 9;
+	h2 {
+		font-size: 3.2rem;
+		line-height: 1.5;
+		font-weight: bold;
+	}
+
+	@media (min-width: 500px) {
+		h2 {
+			font-size: 3.5rem;
+		}
+	}
+
+	p {
+		color: #fff;
+	}
+}
+
+.content {
+	background: #fff;
+	padding: 1px 0 0 0;
+	position: relative;
+}
+
+.company-name {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	a {
+		display: block;
+	}
+
+	svg {
+		display: inline-block;
+		height: 25px;
+		width: 25px;
+	}
+
+	span {
+		font-size: 16px;
+		position: relative;
+		top: -6px;
+		left: 3px;
+	}
+}
+
+.screenshot{
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	border-radius: 2px;
+	padding: 20px 0 0;
+	background: #DDD url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="12" viewBox="0 0 44 12"><circle cx="6" cy="6" r="4" fill="#eee" /><circle cx="22" cy="6" r="4" fill="#eee" /><circle cx="38" cy="6" r="4" fill="#eee" /></svg>') 4px 4px no-repeat;
+	box-shadow: 0px 0px 50px rgba(0,0,0,.2);
+}
+
+section {
+	padding: 100px 0;
+}
+
+section + section {
+	padding-top: 0;
+}
+
+.subtext {
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+.cta {
+	margin: 60px 0;
+}
+
+.page h2 {
+	text-align: center;
+}
+
+blockquote {
+	padding: 18px 25px;
+	margin: 0 auto;
+	quotes: "\201C""\201D""\2018""\2019";
+	font-style: italic;
+	line-height: 2.5;
+	font-size: 1.1em;
+	max-width: 900px;
+
+	.author {
+		display: block;
+		font-weight: bold;
+		margin: 20px 0 0 0;
+		font-size: 1.1em;
+		font-style: normal;
+		text-align: right;
+	}
+
+	p {
+		display: inline;
+	}
+}
+
+blockquote .quote:before,
+blockquote .quote:after {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: -0.4em;
+}
+
+blockquote .quote:after {
+	content: close-quote;
+}
+
+.page {
+	margin-bottom: 0;
+	padding-bottom: 80px;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.thirds {
+	display: flex;
+	margin: 0 -20px 0 -40px;
+	flex-wrap: wrap;
+}
+
+.thirds div {
+	flex: 1 1 200px;
+	padding: 100px 40px 0 40px;
+}
