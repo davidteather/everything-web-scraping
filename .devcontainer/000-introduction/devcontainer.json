@@ -1,4 +1,6 @@
 {
-    "workspaceFolder": "/workspaces/everything-web-scraping/000-introduction",
+    "name": "000 Introduction",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace/000-introduction",
     "image": "mcr.microsoft.com/devcontainers/universal"
 }

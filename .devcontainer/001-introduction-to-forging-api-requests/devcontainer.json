@@ -1,5 +1,7 @@
 {
-    "workspaceFolder": "/workspaces/everything-web-scraping/001-introduction-to-forging-api-requests",
+    "name": "001 Introduction to Forging API Requests",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace/001-introduction-to-forging-api-requests",
     "image": "mcr.microsoft.com/devcontainers/universal",
     "postStartCommand": "docker compose up -d && gh codespace ports visibility 8080:public -c $CODESPACE_NAME",
     "forwardPorts": [5434, 3000, 8080],
