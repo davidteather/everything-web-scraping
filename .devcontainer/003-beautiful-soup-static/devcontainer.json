@@ -1,0 +1,14 @@
+{
+    "name": "003 Beautiful Soup with Static & SSR Web Scraping",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace/003-beautiful-soup-with-static-site-and-server-side-rendered-web-scraping",
+    "image": "mcr.microsoft.com/devcontainers/universal",
+    "postStartCommand": "docker compose up -d && python3 -m pip install -r requirements.txt",
+    "forwardPorts": [3000],
+    "portsAttributes": {
+        "3000": {
+            "label": "Website",
+            "onAutoForward": "openBrowser"
+        }
+    }
+}

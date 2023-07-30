@@ -1,0 +1,30 @@
+---
+title: Find Your Spirit Animal
+hero: Find your spirit animal
+subtitle: The animal friendly clothing company
+---
+
+<div class="content" id="products">
+	<section>
+		<div class="container">
+			<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_products" class="btn"><strong>&#9998;</strong> Manage products</a></p>
+			<ul class="product-list">
+				{% for product in site.products %}
+					<li>
+						{% include product-styles.html product=product %}
+						<div class="product-details">
+							<h4><a href="{{ site.base_url + product.url }}">{{ product.name }}</a></h4>
+							<div class="product-description">
+								{{ product.description_markdown | truncate: 45 | markdownify }}
+							</div>
+							<p>${{ product.price }}</p>
+						</div>
+					</li>
+				{% endfor %}
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,52 @@
+.map {
+	height: 499px;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+}
+
+.contact-box {
+	@extend %flexbox;
+	@include flex-flow(wrap);
+	max-width: 1000px;
+	margin: 0 auto 20px auto;
+	padding: 0 0 50px 0;
+
+	form {
+		width: 100%
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1.8rem;
+	}
+
+	.contact-form, .contact-details  {
+		padding: 20px;
+		width: 100%;
+		box-sizing: border-box;
+		@media #{$desktop} {
+			-webkit-flex: 1;
+			flex: 1;
+			order: 2;
+		}
+	}
+
+	.contact-details {
+		font-size: .8em;
+		@media #{$desktop} {
+			order: 1;
+		}
+
+		a svg {
+			position: relative;
+			top: 5px;
+		}
+
+		a {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: block;
+		}
+	}
+}

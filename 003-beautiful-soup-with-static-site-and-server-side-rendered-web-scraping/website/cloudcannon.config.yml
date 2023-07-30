@@ -1,0 +1,41 @@
+_select_data:
+  garment_types:
+    - hat
+    - top
+
+_inputs:
+  map:
+    comment: "Update the map location and display settings."
+  latitude:
+    comment: "Coordinates for the center marker on the map."
+  longitude:
+    comment: "Coordinates for the center marker on the map."
+  zoom:
+    comment: "The zoom level for the map."
+  pricing_table:
+    comment: "Update the information in the pricing tables."
+  highlight:
+    comment: "Emphasis the text"
+  color:
+    comment: "The background color used in the plan name and call to action."
+  new_window:
+    comment: "Open link in new window"
+  description:
+    comment: "This is used for facebook shares of the page and google indexing"
+
+collections_config:
+  staff_members:
+    _enabled_editors:
+      - data
+    icon: account_circle
+    schemas:
+      default:
+        path: schemas/staff_members.md
+  products:
+    _enabled_editors:
+      - data
+    output: true
+    icon: shopping_cart
+    schemas:
+      default:
+        path: schemas/products.md

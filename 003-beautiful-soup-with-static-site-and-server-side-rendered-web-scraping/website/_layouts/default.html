@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+
+		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+			<script>
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', '{{ site.google_analytics_key }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async src='https://www.google-analytics.com/analytics.js'></script>
+		{% endif %}
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
+		<link rel="preconnect" href="https://app.snipcart.com" />
+		<link rel="preconnect" href="https://cdn.snipcart.com" />
+		{% if site.snipcart_key %}
+			<script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+			<div hidden id="snipcart"
+				data-api-key="{{ site.snipcart_key }}"
+				data-currency="{{ site.snipcart_currency }}"
+				data-config-modal-style="side">
+			</div>
+		{% endif %}
+		<script src="https://kit.fontawesome.com/bf1faf00eb.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="company-name"><a href="{{ site.baseurl }}/">{% include logo.html %} <span>{{ site.title }}</span></a></div>
+				{% include navigation.html %}
+			</div>
+
+			<section class="hero">
+				<div class="text-container">
+					{% if page.hero %}
+						<h2>{{ page.hero }}</h2>
+					{% elsif page.name %}
+						<h2>{{ page.name }}</h2>
+					{% endif %}
+
+					{% if page.subtitle %}
+						<p>{{ page.subtitle }}</p>
+					{% endif %}
+				</div>
+			</section>
+		</header>
+		{{ content }}
+		<footer>
+			<div class="container">
+				<ul class="footer-columns">
+					<li class="about">
+						<div class="company-name">{% include logo.html %} <span>{{ site.title }}</span></div>
+						<p class="editable">Many people have the notion that enlightenment is one state. Many also believe that when it is attained, a person is forever in that state.</p>
+					</li>
+
+					<li class="footer-nav">
+						<h4>General</h4>
+						<ul>
+							<li><a href="/">Products</a></li>
+							<li><a href="/about/">Our Story</a></li>
+							<li><a href="/contact/">Contact</a></li>
+						</ul>
+					</li>
+
+					<li class="footer-nav">
+						<h4>Help</h4>
+						<ul>
+							<li><a href="/shipping/">Shipping</a></li>
+							<li><a href="/returns/">Returns</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<h4>Contact Us</h4>
+						<p>Need help with something? <a href="/contact/">Get in touch</a>.
+						<p class="email"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+						<p><a href="tel:{{ site.author.phone }}">{{ site.author.phone }}</a></p>
+
+						<div class="social-icons">
+							<a class="facebook" href="https://facebook.com/cloudcannon/">{% include social-icon.html icon="Facebook2" %}</a>
+							<a class="twitter" href="https://twitter.com/cloudcannon/">{% include social-icon.html icon="Twitter" %}</a>
+							<a class="youtube" href="https://youtube.com/c/cloudcannon/">{% include social-icon.html icon="YouTube" %}</a>
+							<a class="linkedin" href="https://nz.linkedin.com/company/cloud-cannon">{% include social-icon.html icon="LinkedIn" %}</a>
+						</div>
+					</li>
+				</ul>
+				<p class="copyright">All Rights Reserved &copy; {{ site.time | date: '%Y' }} {{ site.title }}, Inc. Template by <a href="https://cloudcannon.com">CloudCannon</a></p>
+			</div>
+		</footer>
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+				return false;
+			};
+		</script>
+		<script src="{{ site.baseurl }}/js/application.js" type="text/javascript"></script>
+	</body>
+</html>

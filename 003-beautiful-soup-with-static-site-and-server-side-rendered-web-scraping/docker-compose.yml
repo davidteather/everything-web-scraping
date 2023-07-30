@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  website:
+    build:
+      context: ./website
+    ports:
+      - 3000:3000

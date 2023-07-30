@@ -24,6 +24,8 @@ Consider [sponsoring me](https://github.com/sponsors/davidteather) on GitHub to 
 ## Course Catalogue
 0. [Introduction To The Course](/000-introduction/)
 1. [Introduction To Forging API Requests](/001-introduction-to-forging-api-requests/)
+2. [Proxies](/002-proxies)
+3. [Beautiful Soup Scraping With Static and Server Side Rendered Sites](/003-beautiful-soup-with-static-site-and-server-side-rendered-web-scraping)
 
 
 ## How To Start The Mock Websites
@@ -35,7 +37,7 @@ If you don't want to deal with installing and configuring software, I've set up 
 > Note: A free GitHub account comes with 60 hours of Codespaces free each month, and if you're a student you can get 90 hours free each month with GitHub Pro through the [GitHub Student Developer Pack](https://education.github.com/pack) ([source](https://github.com/features/codespaces))
 
 #### Creating A Codespace
-> If you want to save your solutions, [create a fork](https://github.com/davidteather/everything-web-scraping/fork) then create a Codespace from your own fork, then you'll be able to use git to save your changes.
+> If you want to save your solutions, [create a fork](https://github.com/davidteather/everything-web-scraping/fork) then create a Codespace from your own repo, then you'll be able to use git to save your changes as normal.
 
 Create a Codespace using the instructions below or [here](https://github.com/codespaces/new)
 <div align="center">

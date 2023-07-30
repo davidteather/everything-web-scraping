@@ -1,0 +1,75 @@
+# ----
+# Site
+
+title: Fur
+google_analytics_key:
+google_maps_javascript_api_key:
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Fur t-shirt store
+author:
+  name: fur
+  email: fur@example.com
+  twitter: fur # twitter username without the @ symbol
+  phone: "+1 23456789"
+social:
+  name: Fur Template
+  links:
+    - https://github.com/CloudCannon/fur-jekyll-template
+
+# -----
+# Build
+timezone: Etc/UTC
+
+collections:
+  staff_members:
+    output: false
+  products:
+    output: true
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+jekyll-archives:
+  enabled:
+    - categories
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+social_icons:
+  - Email
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
