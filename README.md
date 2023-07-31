@@ -30,6 +30,8 @@ Consider [sponsoring me](https://github.com/sponsors/davidteather) on GitHub to 
 
 ## How To Start The Mock Websites
 
+[Video Walkthrough](https://youtu.be/WmeDXK7KRKE)
+
 ### With GitHub Codespaces (Recommended)
 
 If you don't want to deal with installing and configuring software, I've set up this repository so that a GitHub Codespace can do all of that for you.
